@@ -27,8 +27,9 @@
     "@babel/cli": "^7.22.9",
     "@babel/core": "^7.22.9",
     "babel-plugin-transform-scss": "^1.2.0",
-    "babel-preset-gatsby-package": "^3.11.0",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "sass": "^1.64.1",
+    "uuid": "^9.0.0"
   },
   "scripts": {
     "build": "babel src --out-dir ./build/ --ignore **/__tests__",

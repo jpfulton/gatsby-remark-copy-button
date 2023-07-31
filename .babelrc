@@ -1,4 +1,4 @@
 {
-  "presets": [["babel-preset-gatsby-package", { "browser": true }]],
+  "presets": [],
   "plugins": ["babel-plugin-transform-scss"]
 }
