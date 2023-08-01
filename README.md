@@ -58,10 +58,12 @@ you customize them to override styling to fit your site's look, feel and layout.
     // Default: null
     buttonText: null,
     // Provide a complete SVG tag string to replace the default
-    // copy icon.
+    // copy icon. Be sure to include a class of "copy-icon" on your custom
+    // SVG tag when using this option.
     copySvg: null,
     // Provide a complete SVG tag string to replace the default
-    // success icon.
+    // success icon.  Be sure to include a class of "success-icon" on your custom
+    // SVG tag when using this option.
     successSvg: null,
     // Provide a custom container class for the <div> tag that contains
     // the copy button to apply custom styling.
@@ -94,9 +96,44 @@ Apply custom styles by adding a style sheet to your `gatsby-browser.js` file.
 import "./src/styles/custom-copy-button.scss";
 ```
 
+### Structure of the Injected Markup
+
+When enabled on code snippet, the following `HTML` will be injected into
+the output of the page after parsing the Markdown AST using the default
+plugin options. It will be injected **above** the code snippet in the
+generated `HTML`.
+
+```html
+<div class="gatsby-remark-copy-button-container">
+  <button
+    class="gatsby-remark-copy-button"
+    onclick="copyToClipboard(`CLEANED CODE CONTENT TO COPY HERE`, this)"
+  >
+    <svg
+      class="copy-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      ...
+    </svg>
+    <svg
+      class="success-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      ...
+    </svg>
+  </button>
+</div>
+```
+
 ### Usage in Markdown
 
-Once installed, the copy button may optionally be enabled by adding
+Once installed, the copy button may _optionally_ be enabled by adding
 to the code snippet declaration within markdown files. When this plugin
 is used in conjunction with the `gatsby-remark-prismjs` plugin, the
 `{clipboardButton: true}` option may be provided in any order with other
