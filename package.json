@@ -10,6 +10,7 @@
     "copy button"
   ],
   "main": "index.js",
+  "type": "module",
   "repository": "git@github.com:jpfulton/gatsby-remark-copy-button.git",
   "author": "J. Patrick Fulton <jpatrick.fulton@gmail.com>",
   "license": "MIT",
