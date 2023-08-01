@@ -1,5 +1,5 @@
 import { CONTINUE, visit } from "unist-util-visit";
-import parseOptions from "./parse-options";
+import parseOptions from "./parse-options.js";
 
 export default (
   { markdownAST },
