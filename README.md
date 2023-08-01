@@ -145,3 +145,12 @@ prismjs options.
 const example = "This content will end up on the user's clipboard";
 ```;
 ````
+
+## Further Information
+
+For details on contributing to this project, reference both the
+[CONTRIBUTING.md](./CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+documentation.
+
+To report create a security advisory, please reference the
+[SECURITY.md](./SECURITY.md) policy document.
