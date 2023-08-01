@@ -1,6 +1,18 @@
 import { CONTINUE, visit } from "unist-util-visit";
 import parseOptions from "./parse-options.js";
 
+// Perform conversion from the contents of a "code" node to
+// a string that may be passed in a JS function parameter
+// for conversion to plain text as placed on the browser
+// clipboard. Double quotes, single backticks and dollar signs
+// all require conversion for this operation.
+function convertContentsToJavaScriptString(code) {
+  return code
+    .replace(/"/gm, "&quot;")
+    .replace(/`/gm, "\\`")
+    .replace(/\$/gm, "\\$");
+}
+
 export default (
   { markdownAST },
   {
@@ -34,10 +46,7 @@ export default (
 
     if (clipboardButton === true) {
       let code = parent.children[index].value;
-      code = code
-        .replace(/"/gm, "&quot;")
-        .replace(/`/gm, "\\`")
-        .replace(/\$/gm, "\\$");
+      code = convertContentsToJavaScriptString(code);
 
       const buttonNode = {
         type: "html",
