@@ -47,7 +47,7 @@ jobs:
         with:
           command: c
           cwd: ./
-          files: ./*
+          files: ./
           outPath: source.tar.gz
 
       - name: Create a GitHub release
