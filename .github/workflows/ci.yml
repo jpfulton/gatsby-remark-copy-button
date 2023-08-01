@@ -106,7 +106,7 @@ jobs:
         id: package_version_update
         uses: technote-space/package-version-check-action@v1.9.3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.FINE_GRAINED_PAT }}
           COMMIT_MESSAGE: "Updating package.json version from GitHub Action."
           NEXT_VERSION: ${{ steps.tag_version.outputs.new_tag }}
 
