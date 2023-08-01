@@ -1,6 +1,6 @@
 {
   "name": "@jpfulton/gatsby-remark-copy-button",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A Gatsby remark plugin to support copy buttons on code regions with support for MDX.",
   "keywords": [
     "gatsby",
