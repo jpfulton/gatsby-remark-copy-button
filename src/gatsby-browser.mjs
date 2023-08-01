@@ -1,4 +1,4 @@
-import "./styles.scss";
+import "./styles.css";
 
 export function onClientEntry() {
   window.copyToClipboard = (str, button) => {
