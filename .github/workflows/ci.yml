@@ -29,18 +29,18 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Bump version and push tag
-        id: tag_version
-        uses: mathieudutour/github-tag-action@v6.1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Package Version Check and Update Action
         uses: technote-space/package-version-check-action@v1.9.3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_MESSAGE: "Updating package.json version from GitHub Action."
-          NEXT_VERSION: ${{ steps.tag_version.outputs.new_tag }}
+          #NEXT_VERSION: ${{ steps.tag_version.outputs.new_tag }}
+
+      - name: Bump version and push tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Pull Most Recent Changes Made By Previous Steps
         run: git reset --hard HEAD && git pull
@@ -48,7 +48,7 @@ jobs:
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
         with:
-          #tag: ${{ steps.tag_version.outputs.new_tag }}
+          tag: ${{ steps.tag_version.outputs.new_tag }}
           name: Release ${{ steps.tag_version.outputs.new_tag }}
           body: ${{ steps.tag_version.outputs.changelog }}
 
