@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for being here! Contributions to this project are welcome and encouraged.
+Thanks for being here! Contributions to this project are both welcome and encouraged.
 
 ## Opening an Issue
 
@@ -44,3 +44,7 @@ yarn
 ### Compiling
 
 To compile this package, run `yarn build`.
+
+### Cleaning after a Build
+
+To clean the repository directory following a build, run `yarn clean`.
