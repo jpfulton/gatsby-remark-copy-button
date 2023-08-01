@@ -32,3 +32,7 @@ flow-typed
 coverage
 decls
 examples
+
+# GitHub and VS Code directories
+.github
+.vscode
