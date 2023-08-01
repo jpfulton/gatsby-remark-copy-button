@@ -140,10 +140,10 @@ is used in conjunction with the `gatsby-remark-prismjs` plugin, the
 `{clipboardButton: true}` option may be provided in any order with other
 prismjs options.
 
-````js
+````markdown
 ```js {clipboardButton: true}
 const example = "This content will end up on the user's clipboard";
-```;
+```
 ````
 
 ## Further Information
@@ -152,7 +152,7 @@ For details on contributing to this project, reference both the
 [CONTRIBUTING.md](./CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 documentation.
 
-To submit a bug or feature request, please open a issue
+To submit a bug or feature request, please open an issue
 [here](https://github.com/jpfulton/gatsby-remark-copy-button/issues/new/choose).
 
 To report create a security advisory, please reference the
