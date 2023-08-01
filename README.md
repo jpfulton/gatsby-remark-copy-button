@@ -153,7 +153,7 @@ For details on contributing to this project, reference both the
 documentation.
 
 To submit a bug or feature request, please open a issue
-[here](https://github.com/jpfulton/gatsby-remark-copy-button/issues/new).
+[here](https://github.com/jpfulton/gatsby-remark-copy-button/issues/new/choose).
 
 To report create a security advisory, please reference the
 [SECURITY.md](./SECURITY.md) policy document.

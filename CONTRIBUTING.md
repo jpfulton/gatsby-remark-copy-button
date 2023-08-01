@@ -4,7 +4,7 @@ Thanks for being here! Contributions to this project are welcome and encouraged.
 
 ## Opening an Issue
 
-All contributions start with [an issue](https://github.com/jpfulton/gatsby-remark-copy-button/issues/new).
+All contributions start with [an issue](https://github.com/jpfulton/gatsby-remark-copy-button/issues/new/choose).
 Even if you have a good idea of what the problem is and what the solution looks like,
 please open an issue. This will give us an opportunity to align on the problem and solution.
 Templates are available for both bug reports and feature requests.
