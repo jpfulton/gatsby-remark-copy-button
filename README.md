@@ -152,5 +152,8 @@ For details on contributing to this project, reference both the
 [CONTRIBUTING.md](./CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 documentation.
 
+To submit a bug or feature request, please open a issue
+[here](https://github.com/jpfulton/gatsby-remark-copy-button/issues/new).
+
 To report create a security advisory, please reference the
 [SECURITY.md](./SECURITY.md) policy document.
