@@ -15,6 +15,7 @@
   "author": "J. Patrick Fulton <jpatrick.fulton@gmail.com>",
   "license": "MIT",
   "private": false,
+  "packageManager": "yarn@1.22.19",
   "peerDependencies": {
     "gatsby": "^5.0.0-next"
   },
