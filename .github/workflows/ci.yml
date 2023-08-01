@@ -46,6 +46,7 @@ jobs:
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
         with:
+          generateReleaseNotes: true
           tag: ${{ steps.tag_version.outputs.new_tag }}
           commit: ${{ steps.package_version_update.outputs.sha }}
           name: Release ${{ steps.tag_version.outputs.new_tag }}
