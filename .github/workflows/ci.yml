@@ -66,6 +66,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      - name: Checkout HEAD
+        run: git checkout HEAD^
+
       - name: Set up node
         uses: actions/setup-node@v3
 
