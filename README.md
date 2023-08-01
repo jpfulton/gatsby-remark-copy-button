@@ -2,6 +2,7 @@
 
 [![ci](https://github.com/jpfulton/gatsby-remark-copy-button/actions/workflows/ci.yml/badge.svg)](https://github.com/jpfulton/gatsby-remark-copy-button/actions/workflows/ci.yml)
 [![npm version](https://badge.fury.io/js/%40jpfulton%2Fgatsby-remark-copy-button.svg)](https://www.npmjs.com/package/@jpfulton/gatsby-remark-copy-button)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
 Add a copy button to **markdown** code snippets in
 [Gatsby](https://www.gatsbyjs.com) sites with
@@ -144,3 +145,15 @@ prismjs options.
 const example = "This content will end up on the user's clipboard";
 ```;
 ````
+
+## Further Information
+
+For details on contributing to this project, reference both the
+[CONTRIBUTING.md](./CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+documentation.
+
+To submit a bug or feature request, please open a issue
+[here](https://github.com/jpfulton/gatsby-remark-copy-button/issues/new/choose).
+
+To report create a security advisory, please reference the
+[SECURITY.md](./SECURITY.md) policy document.
