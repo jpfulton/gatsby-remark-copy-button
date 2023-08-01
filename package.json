@@ -32,6 +32,7 @@
   "scripts": {
     "build": "npm run sass && npm run babel",
     "babel": "babel src --out-dir .",
+    "clean": "rm *.js && rm *.css",
     "sass": "node_modules/node-sass/bin/node-sass src/styles.scss ./styles.css"
   }
 }
