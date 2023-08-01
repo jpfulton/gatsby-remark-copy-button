@@ -43,9 +43,6 @@ jobs:
           COMMIT_MESSAGE: "Updating package.json version from GitHub Action."
           NEXT_VERSION: ${{ steps.tag_version.outputs.new_tag }}
 
-      - name: Pull Most Recent Changes Made By Previous Steps
-        run: git reset --hard HEAD && git pull
-
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
         with:
