@@ -9,6 +9,9 @@ Add a copy button to **markdown** code snippets in
 compatibility for **MDX** and use of the browser
 [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API).
 
+This package and implementation is discussed in this
+[blog post](https://www.jpatrickfulton.dev/blog/2023-08-02-gatsby-remark-copy-button/).
+
 ## Install
 
 ```bash
