@@ -94,7 +94,7 @@ Apply custom styles by adding a style sheet to your `gatsby-browser.js` file.
 
 ```js
 // gatsby-browser.js
-import "./src/styles/custom-copy-button.scss";
+import "./src/styles/copy-button.scss";
 ```
 
 ### Structure of the Injected Markup
