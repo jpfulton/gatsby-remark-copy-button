@@ -31,9 +31,9 @@
     "sass": "^1.64.2"
   },
   "scripts": {
-    "build": "npm run sass && npm run babel",
+    "build": "yarn sass && yarn babel",
     "babel": "babel src --out-dir .",
     "clean": "rm *.js && rm *.css",
-    "sass": "node_modules/node-sass/bin/node-sass src/styles.scss ./styles.css"
+    "sass": "sass --style=compressed --no-source-map src/styles.scss ./styles.css"
   }
 }
