@@ -14,8 +14,7 @@
   "repository": "git@github.com:jpfulton/gatsby-remark-copy-button.git",
   "author": "J. Patrick Fulton <jpatrick.fulton@gmail.com>",
   "license": "MIT",
-  "private": false,
-  "packageManager": "yarn@1.22.19",
+  "packageManager": "yarn@3.6.3",
   "peerDependencies": {
     "gatsby": "^5.0.0-next"
   },
