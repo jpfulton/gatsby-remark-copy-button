@@ -3,6 +3,7 @@
 [![ci](https://github.com/jpfulton/gatsby-remark-copy-button/actions/workflows/ci.yml/badge.svg)](https://github.com/jpfulton/gatsby-remark-copy-button/actions/workflows/ci.yml)
 [![npm version](https://badge.fury.io/js/%40jpfulton%2Fgatsby-remark-copy-button.svg)](https://www.npmjs.com/package/@jpfulton/gatsby-remark-copy-button)
 ![License](https://img.shields.io/badge/License-MIT-blue)
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=jpfulton.gatsby-remark-copy-button)
 
 Add a copy button to **markdown** code snippets in
 [Gatsby](https://www.gatsbyjs.com) sites with
