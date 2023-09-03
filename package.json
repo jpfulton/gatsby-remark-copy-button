@@ -15,13 +15,11 @@
   "author": "J. Patrick Fulton <jpatrick.fulton@gmail.com>",
   "license": "MIT",
   "packageManager": "yarn@3.6.3",
-  "peerDependencies": {
-    "gatsby": "^5.0.0-next"
-  },
   "engines": {
     "node": ">=18.16.0"
   },
   "dependencies": {
+    "gatsby": "^5.0.0-next",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
@@ -35,9 +33,10 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "build": "yarn sass && yarn babel",
-    "babel": "babel src --out-dir .",
-    "clean": "rm *.js && rm *.css",
-    "sass": "sass --style=compressed --no-source-map src/styles.scss ./styles.css"
+    "build": "yarn sass && tsc && yarn babel",
+    "babel": "babel dist --out-dir .",
+    "clean": "rm *.js && rm *.css && rm -rf dist",
+    "sass": "sass --style=compressed --no-source-map src/styles.scss ./styles.css",
+    "lint": "eslint ."
   }
 }
