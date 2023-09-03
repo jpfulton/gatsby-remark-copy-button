@@ -1,6 +1,11 @@
-export default (language) => {
+export interface Options {
+  splitLanguage: string;
+  clipboardButton?: boolean;
+}
+
+export default (language: string): Options => {
   if (!language) {
-    return ``;
+    return { splitLanguage: "" };
   }
 
   if (language.split(`{`).length > 1) {
