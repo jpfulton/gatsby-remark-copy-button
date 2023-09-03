@@ -6,11 +6,19 @@ import parseOptions from "./parse-options.js";
 // for conversion to plain text as placed on the browser
 // clipboard. Double quotes, single backticks and dollar signs
 // all require conversion for this operation.
-function convertContentsToJavaScriptString(code) {
+function convertContentsToJavaScriptString(code: string): string {
   return code
     .replace(/"/gm, "&quot;")
     .replace(/`/gm, "\\`")
     .replace(/\$/gm, "\\$");
+}
+
+interface PluginOptions {
+  buttonText: string | undefined;
+  copySvg: string | undefined;
+  successSvg: string | undefined;
+  customButtonContainerClass: string | undefined;
+  customButtonClass: string | undefined;
 }
 
 export default (
@@ -21,7 +29,7 @@ export default (
     successSvg,
     customButtonContainerClass,
     customButtonClass,
-  }
+  }: PluginOptions
 ) => {
   // use plugin options as presented
   const text = buttonText || "";
@@ -36,13 +44,13 @@ export default (
   const buttonClass = customButtonClass || "gatsby-remark-copy-button";
 
   visit(markdownAST, "code", (node, index, parent) => {
-    let language = node.meta ? node.lang + node.meta : node.lang;
+    const language = node.meta ? node.lang + node.meta : node.lang;
 
     if (!language) {
-      return;
+      return markdownAST;
     }
 
-    const { _, clipboardButton } = parseOptions(language);
+    const { clipboardButton } = parseOptions(language);
 
     if (clipboardButton === true) {
       let code = parent.children[index].value;

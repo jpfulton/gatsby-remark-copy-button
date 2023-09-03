@@ -1,6 +1,13 @@
+import type { GatsbyBrowser } from "gatsby";
 import "./styles.css";
 
-export function onClientEntry() {
+declare global {
+  interface Window {
+    copyToClipboard: (str: string, button: HTMLButtonElement) => void;
+  }
+}
+
+export const onClientEntry: GatsbyBrowser["onClientEntry"] = () => {
   window.copyToClipboard = (str, button) => {
     if (!button) return;
 
@@ -11,8 +18,8 @@ export function onClientEntry() {
 
     if (button.getAttribute(lockAttributeName) === "true") return;
 
-    const copyIcon = button.querySelector(".copy-icon");
-    const successIcon = button.querySelector(".success-icon");
+    const copyIcon = button.querySelector(".copy-icon") as HTMLElement;
+    const successIcon = button.querySelector(".success-icon") as HTMLElement;
 
     if (button.getAttribute(lockAttributeName) === "false") {
       // set tag local lock variable
@@ -42,4 +49,4 @@ export function onClientEntry() {
       );
     }
   };
-}
+};
