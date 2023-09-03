@@ -19,7 +19,6 @@
     "node": ">=18.16.0"
   },
   "dependencies": {
-    "gatsby": "^5.0.0-next",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
@@ -29,8 +28,12 @@
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
     "eslint": "^8.48.0",
+    "gatsby": "^5.0.0-next",
     "sass": "^1.64.2",
     "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "gatsby": "^5.0.0-next"
   },
   "scripts": {
     "build": "yarn sass && tsc && yarn babel",

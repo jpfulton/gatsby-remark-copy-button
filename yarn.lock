@@ -2163,6 +2163,8 @@ __metadata:
     sass: ^1.64.2
     typescript: ^5.2.2
     unist-util-visit: ^5.0.0
+  peerDependencies:
+    gatsby: ^5.0.0-next
   languageName: unknown
   linkType: soft
 
