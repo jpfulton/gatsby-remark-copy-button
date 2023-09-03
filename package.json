@@ -27,7 +27,12 @@
   "devDependencies": {
     "@babel/cli": "^7.22.9",
     "@babel/core": "^7.22.9",
-    "sass": "^1.64.2"
+    "@types/node": "^20.5.9",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "eslint": "^8.48.0",
+    "sass": "^1.64.2",
+    "typescript": "^5.2.2"
   },
   "scripts": {
     "build": "yarn sass && yarn babel",
