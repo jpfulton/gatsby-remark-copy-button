@@ -1,13 +1,6 @@
 {
-  "include": ["src/**/*", "/action/workspace/dangerfile.ts"],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "public",
-    ".cache",
-    "__tests__",
-    "/action/workspace/dangerfile.ts"
-  ],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "public", ".cache", "__tests__"],
   "compilerOptions": {
     "target": "ES6",
     "moduleResolution": "node",
