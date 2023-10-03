@@ -6,7 +6,7 @@
     "public",
     ".cache",
     "__tests__",
-    "dangerfile.ts"
+    "**/dangerfile.ts"
   ],
   "compilerOptions": {
     "target": "ES6",
