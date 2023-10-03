@@ -1,12 +1,12 @@
 {
-  "include": ["src/**/*", "**/dangerfile.ts"],
+  "include": ["src/**/*", "/action/workspace/dangerfile.ts"],
   "exclude": [
     "node_modules",
     "dist",
     "public",
     ".cache",
     "__tests__",
-    "**/dangerfile.ts"
+    "/action/workspace/dangerfile.ts"
   ],
   "compilerOptions": {
     "target": "ES6",
