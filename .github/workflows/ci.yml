@@ -35,7 +35,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Initializes the CodeQL tools for scanning.
       - name: Initialize CodeQL
@@ -74,9 +74,15 @@ jobs:
     name: Compile
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      checks: write
+      pull-requests: write
+      statuses: write
+
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up node
         uses: actions/setup-node@v3
@@ -94,6 +100,14 @@ jobs:
       - name: Build
         run: yarn build --verbose
 
+      - name: Danger
+        if: (github.event_name == 'pull_request' && github.event.action != 'closed')
+        uses: jpfulton/danger-js-action@main
+        with:
+          dangerfile: https://raw.githubusercontent.com/jpfulton/jpfulton-devops-config/main/danger-files/dangerfile-node-project.ts
+          debug_mode: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
   tag-release-and-publish:
     name: "Tag, Release and Publish"
     needs: [analyze, compile]
@@ -104,7 +118,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Bump version and push tag
         id: tag_version
